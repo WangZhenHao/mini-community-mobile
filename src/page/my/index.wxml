@@ -1,0 +1,86 @@
+<view class="my color-3">
+    <van-nav-bar title="我的" custom-class="nav-class"></van-nav-bar>
+    <view class="p-32">
+        <view class="my-title bg-f flex-box align-center p-l-32 p-t-24 p-b-24">
+            <view class="my-title__logo"></view>
+            <view class="font-40 color-3" style="padding-left: 16rpx">{{
+                appType === 2 ? "存餐骑士" : "取餐用户"
+            }}</view>
+        </view>
+        <view
+            class="border-radios bg-f m-t-32 p-32 money"
+            wx:if="{{ appType === 2 }}"
+        >
+            <view class="font-32">余额</view>
+            <view class="flex-box justify-s-b" style="margin-top: 22rpx">
+                <view>
+                    <view>
+                        <text class="color-main font-34">￥</text>
+                        <text
+                            style="font-size: 80rpx; line-height: 1"
+                            class="color-main font-bold"
+                            >30</text
+                        >
+                    </view>
+                    <view
+                        class="color-9 font-24 font-28"
+                        style="margin-top: 10rpx"
+                        >充值存餐更方便，豪礼等你拿！</view
+                    >
+                </view>
+                <navigator
+                    url="/pageSub/my/pay/index"
+                    class="color-f to-add text-center"
+                    >立即充值</navigator
+                >
+            </view>
+        </view>
+        <view
+            class="border-radios bg-f m-t-32 flex-box p-32 list text-center font-24"
+        >
+            <navigator url="/pageSub/my/help/index" class="list-item">
+                <view class="iconfont icon-bangzhu color-3"></view>
+                <view>帮助中心</view>
+            </navigator>
+            <navigator wx:if="{{ appType === 2 }}" url="/pageSub/my/payList/index" class="list-item">
+                <view class="iconfont icon-qucanjilu color-3"></view>
+                <view>账单明细</view>
+            </navigator>
+            <navigator wx:if="{{ appType === 1 }}" url="/pageSub/my/order/index" class="list-item">
+                <view class="iconfont icon-qucanjilu color-3"></view>
+                <view>取餐记录</view>
+            </navigator>
+        </view>
+        <view class="border-radios bg-f m-t-32 font-32 ceil-wrap">
+            <view>
+                <navigator
+                    url="/page/login/index?title=修改手机号码"
+                    class="flex-box justify-s-b p-32 align-center ceil-item"
+                >
+                <!-- van-hairline--bottom -->
+                    <view>修改手机号码</view>
+                    <view class="color-9 flex-box align-center">
+                        <text class="font-28">18924298775</text>
+                        <text class="iconfont icon-jiantou"></text>
+                    </view>
+                </navigator>
+                <!-- <navigator
+                    url="/pageSub/my/ruleCenter/index"
+                    class="flex-box justify-s-b p-32 align-center ceil-item"
+                >
+                    <view>规则中心</view>
+                    <view class="color-9 flex-box align-center">
+                        <text class="font-28">查看</text>
+                        <text class="iconfont icon-jiantou"></text>
+                    </view>
+                </navigator> -->
+            </view>
+        </view>
+        <view style="margin-top: 64rpx" bindtap="logoOutHanlde">
+            <van-button type="default" custom-class="logo-out"
+                >退出登录</van-button
+            >
+        </view>
+    </view>
+</view>
+<u-tab-bar />

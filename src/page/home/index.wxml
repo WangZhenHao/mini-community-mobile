@@ -1,0 +1,23 @@
+<view>
+    <van-nav-bar title="身份选择" custom-class="nav-class"></van-nav-bar>
+    <view class="context">
+        <view class="card-wrap bg-f">
+            <image
+                bind:tap="switchTab"
+                data-index="1"
+                mode="aspectFit"
+                class="img width-100"
+                src="@CDNHOST/images/home/1.png"
+            />
+            <image
+                bind:tap="switchTab"
+                data-index="2"
+                bind:tap="switchTab"
+                mode="aspectFit"
+                class="img width-100 m-t-24"
+                src="@CDNHOST/images/home/2.png"
+            />
+        </view>
+    </view>
+</view>
+

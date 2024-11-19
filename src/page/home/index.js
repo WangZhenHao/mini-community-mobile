@@ -4,26 +4,18 @@ Page({
     data: {
       checked: true,
     },
-    // onLoad() {
-    //     console.log('1312', "@CNDHOST")
-    // },
-    switchTab(target) {
-      const type = Number(target.currentTarget.dataset.index);
-
-      app.global.setInfo.appType = type
-      wx.$tools.setLocalStorage('appType', type);
-
-      wx.switchTab({
-        url: '/page/takeout/index'
-      })
+    onLoad() {
+        console.log('1312')
     },
-    onChange({ detail }) {
-      // 需要手动对 checked 状态进行更新
-      this.setData({ checked: detail });
+    handleGetNumber(value) {
+      console.log(value)
     },
-    getHttp() {
-      wx.$axios.get('https://www.baidu.com').then(res => {
-        console.log(res)
+    handleAgreePrivacyAuthorization(value) {
+      console.log(value, 1)
+      wx.openPrivacyContract({
+        success: () => {}, // 打开成功
+        fail: () => {}, // 打开失败
+        complete: () => {}
       })
     }
   });

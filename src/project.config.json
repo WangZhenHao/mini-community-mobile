@@ -1,6 +1,6 @@
 {
-  "appid": "wx2c940aaf35969948",
-  "projectname": "社区服务",
+  "appid": "{appId}",
+  "projectname": "{appName}",
   "compileType": "miniprogram",
   "libVersion": "3.3.0",
   "packOptions": {

@@ -17,7 +17,7 @@
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "page/takeout/index",
+        "pagePath": "page/home/index",
         "text": "存餐",
         "iconPath": "images/icon/home.png",
         "selectedIconPath": "images/icon/selectHome.png"

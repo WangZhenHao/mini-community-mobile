@@ -40,5 +40,5 @@
     "van-collapse-item": "@components/vant/collapse-item/index",
     "van-popup": "@components/vant/popup/index"
   },
-  "__usePrivacyCheck__": true
+  "__usePrivacyCheck__": false
 }
